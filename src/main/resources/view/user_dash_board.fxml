@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashFormController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="90.0" prefWidth="650.0" style="-fx-background-color: FF204E;" text="         Clothify Store (PVT) Ltd">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="312.0" layoutY="155.0" onAction="#btn_dashform_place_oder_form_on_action" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: RED;" text="PLACE ODER FORM" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="312.0" layoutY="356.0" onAction="#btn_dashform_add_suppier_form_on_action" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: RED;" text="ADD SUPPLIER" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="312.0" layoutY="255.0" onAction="#btn_dashform_add_item_on_action" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: RED;" text="ADD ITEM" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="266.0" fitWidth="258.0" layoutX="29.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="261.0" fitWidth="263.0" layoutX="27.0" layoutY="149.0">
+               <image>
+                  <Image url="@../image/homePageimage.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="29.0" layoutY="406.0" onAction="#btn_user_dashboard_back_on_action" prefHeight="22.0" prefWidth="92.0" style="-fx-background-color: RED;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

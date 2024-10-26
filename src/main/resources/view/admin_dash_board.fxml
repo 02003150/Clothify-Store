@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashFormController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="81.0" prefWidth="600.0" style="-fx-background-color: FF204E;" text="        Clothify Store (PVT) Ltd">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="320.0" layoutY="132.0" onAction="#btn_admin_dashform_regis_user_Form_on_action" prefHeight="75.0" prefWidth="249.0" style="-fx-background-color: RED;" text="REGISTER USERS" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="320.0" layoutY="249.0" onAction="#btn_admin_dashform_add_employer_Form_on_action" prefHeight="75.0" prefWidth="248.0" style="-fx-background-color: RED;" text="ADD EMPLOYERS" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="46.0" layoutY="345.0" onAction="#btn_admin_dashform_back_on_action" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: RED;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="206.0" fitWidth="228.0" layoutX="42.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="198.0" fitWidth="200.0" layoutX="56.0" layoutY="125.0">
+               <image>
+                  <Image url="@../image/homePageimage.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
