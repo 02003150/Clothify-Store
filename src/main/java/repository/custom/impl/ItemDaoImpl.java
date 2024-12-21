@@ -3,11 +3,11 @@ package repository.custom.impl;
 import entity.ItemEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.hibernate.Session;
 import org.hibernate.query.Query;
 import repository.custom.ItemDao;
-import org.hibernate.Session;
-import service.custom.ItemService;
 import util.HibernateUtil;
+
 
 public class ItemDaoImpl implements ItemDao {
     @Override
@@ -23,11 +23,11 @@ public class ItemDaoImpl implements ItemDao {
     @Override
     public boolean update(ItemEntity entity) {
 
-        System.out.println("CCCCC :"+entity);
-
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
-        Query query = session.createQuery("UPDATE ItemEntity SET item = :item, qty = :qty, price = :price, catagory = :catagory, description = :description WHERE itmCode = :id");
+        Query query = session.createQuery("UPDATE ItemEntity SET item = :item, qty = :qty, price = :price, catagory = :catagory, description = :description, totalPrice= :totalPrice WHERE itmCode = :id ");
+
+        System.out.println("CCCCC :"+entity);
 
         query.setParameter("id",entity.getItmCode());
         query.setParameter("item",entity.getItem());
@@ -35,9 +35,11 @@ public class ItemDaoImpl implements ItemDao {
         query.setParameter("price",entity.getPrice());
         query.setParameter("catagory",entity.getCatagory());
         query.setParameter("description",entity.getDescription());
+        query.setParameter("totalPrice",entity.getTotalPrice());
 
-
+        System.out.println(entity.getQty());
         boolean isupdate = query.executeUpdate() > 0;
+        System.out.println(isupdate);
         session.getTransaction().commit();
         session.close();
         return isupdate;

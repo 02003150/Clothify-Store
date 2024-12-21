@@ -35,12 +35,13 @@
                   </JFXTextField>
                   <TableView fx:id="tblAddItemFormTable" layoutX="14.0" layoutY="439.0" prefHeight="254.0" prefWidth="894.0" style="-fx-background-color: FF8080;">
                     <columns>
-                        <TableColumn fx:id="colIdAddItemFormTable" prefWidth="122.4000244140625" text="ID" />
-                        <TableColumn fx:id="colItemAddItemFormTable" prefWidth="155.20001220703125" text="ITEM" />
-                        <TableColumn fx:id="colPriceAddItemFormTable" prefWidth="153.5999755859375" text="PRICE" />
-                        <TableColumn fx:id="colQtyAddItemFormTable" prefWidth="153.5999755859375" text="QTY" />
-                        <TableColumn fx:id="colCatagoryAddItemFormTable" prefWidth="153.5999755859375" text="CATOGORY" />
-                        <TableColumn fx:id="colDiscriptionAddItemFormTable" prefWidth="156.79995117187502" text="DISCRIPTION" />
+                        <TableColumn fx:id="colIdAddItemFormTable" prefWidth="74.39999294281006" text="ID" />
+                        <TableColumn fx:id="colItemAddItemFormTable" prefWidth="169.5999755859375" text="ITEM" />
+                        <TableColumn fx:id="colPriceAddItemFormTable" prefWidth="115.20001220703125" text="PRICE" />
+                        <TableColumn fx:id="colQtyAddItemFormTable" minWidth="3.20001220703125" prefWidth="76.0" text="QTY" />
+                        <TableColumn fx:id="colCatagoryAddItemFormTable" prefWidth="198.4000244140625" text="CATOGORY" />
+                        <TableColumn fx:id="colDiscriptionAddItemFormTable" prefWidth="158.39990234375" text="DISCRIPTION" />
+                        <TableColumn fx:id="colTotalPriceAddItemFormTable1" prefWidth="108.800048828125" text="TOTAL PRICE" />
                     </columns>
                      <effect>
                         <Blend />
@@ -89,13 +90,18 @@
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXTextField fx:id="txtDescriptionAddItemForm" layoutX="64.0" layoutY="320.0" prefHeight="40.0" prefWidth="710.0" promptText="description" style="-fx-background-color: FF8080;" unFocusColor="#947171">
+                  <JFXTextField fx:id="txtDescriptionAddItemForm" layoutX="64.0" layoutY="320.0" prefHeight="40.0" prefWidth="357.0" promptText="description" style="-fx-background-color: FF8080;" unFocusColor="#947171">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXTextField>
                   <JFXComboBox fx:id="cmbCatogoryAddItemForm" layoutX="444.0" layoutY="208.0" prefHeight="38.0" prefWidth="328.0" promptText="Catogory" style="-fx-background-color: FF8080;" />
                   <JFXTextField fx:id="txtIdtemAddItemForm" layoutX="652.0" layoutY="153.0" prefHeight="40.0" prefWidth="120.0" promptText=" search Id" style="-fx-background-color: F95454;" text=" id">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtTotalPriceAddItemForm1" layoutX="444.0" layoutY="320.0" prefHeight="40.0" prefWidth="328.0" promptText="   total price" style="-fx-background-color: FF8080;">
                      <font>
                         <Font size="18.0" />
                      </font>

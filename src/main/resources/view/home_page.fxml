@@ -10,21 +10,21 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton layoutX="308.0" layoutY="135.0" onAction="#btn_homepage_user_OnAction" prefHeight="66.0" prefWidth="243.0" style="-fx-background-color: RED;" text="USER" textFill="WHITE">
+            <JFXButton layoutX="355.0" layoutY="134.0" onAction="#btn_homepage_user_OnAction" prefHeight="64.0" prefWidth="230.0" style="-fx-background-color: #808e9b;" text="USER" textFill="#611c1c">
                <font>
                   <Font size="38.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="308.0" layoutY="270.0" onAction="#btn_homepage_admin_OnAction" prefHeight="66.0" prefWidth="243.0" style="-fx-background-color: RED;" text="ADMIN" textFill="WHITE">
+            <JFXButton layoutX="357.0" layoutY="266.0" onAction="#btn_homepage_admin_OnAction" prefHeight="82.0" prefWidth="226.0" style="-fx-background-color: #808e9b;" text="ADMIN" textFill="#662a2a">
                <font>
                   <Font size="38.0" />
                </font>
             </JFXButton>
-            <Label contentDisplay="CENTER" layoutY="-2.0" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: FF204E;" text="       Clothify Store (PVT) Ltd">
+            <Label contentDisplay="CENTER" layoutY="-2.0" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: black;" text="       Clothify Store (PVT) Ltd" textFill="#b9a4a4">
                <font>
-                  <Font size="42.0" />
+                  <Font name="System Bold" size="42.0" />
                </font>
             </Label>
             <ImageView fitHeight="248.0" fitWidth="237.0" layoutX="47.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
@@ -32,9 +32,10 @@
             <ImageView fitHeight="255.0" fitWidth="273.0" layoutX="14.0" layoutY="111.0">
                
             </ImageView>
-            <ImageView fitHeight="232.0" fitWidth="250.0" layoutX="28.0" layoutY="131.0">
+            <ImageView fitHeight="318.0" fitWidth="288.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="319.0" fitWidth="343.0" layoutX="-1.0" layoutY="83.0">
                <image>
-                  <Image url="@../image/homePageimage.jpg" />
+                  <Image url="@../image/wallpaper.jpg" />
                </image>
             </ImageView>
          </children>

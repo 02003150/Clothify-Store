@@ -2,24 +2,34 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import edu.clothifyStore.util.DaoType;
 import edu.clothifyStore.util.ServiceType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lombok.RequiredArgsConstructor;
 import model.AddToCart;
 import model.Items;
+import repository.DaoFactory;
+import repository.SuperDao;
 import service.ServiceFactory;
+import service.SuperService;
 import service.custom.ItemService;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
+
+
+
 
 public class PlaceOderFormContrlloer implements Initializable {
 
@@ -28,6 +38,10 @@ public class PlaceOderFormContrlloer implements Initializable {
     public Label lblDatePlaceOderForm;
     public JFXTextField txtOderIdPlaceOderForm;
     public TableView tblPlaceOderForm;
+    public Label lblDatePlaceOderForm1;
+    public JFXTextField txtTotalPricePlaceOderForm;
+    public TableColumn colTotalPricePlaceOderForm1;
+    public TableColumn<?, ?>  colTotalPricePlaceOderForm;
     @FXML
     private TableColumn<?, ?> colCustomerNamePlaceOderForm;
     @FXML
@@ -71,6 +85,7 @@ public class PlaceOderFormContrlloer implements Initializable {
 
     @FXML
     private JFXTextField txtStockPlaceOderForm;
+
 
     @FXML
     void btnAddOnActionPlaceOderForm(ActionEvent event) {
@@ -128,10 +143,13 @@ public class PlaceOderFormContrlloer implements Initializable {
         Items items = itemService.searchItem(newVal);
         System.out.println("items "+items);
         txtItemPlaceOderForm.setText(items.getItem());
+        txtStockPlaceOderForm.setText(items.getQty().toString());
+        txtDescriptionPlaceOderForm1.setText(items.getDescription());
+        txtPricePlaceOderForm.setText(items.getPrice().toString());
     }
-    public void btnAddToCartOnActionPlaceOderForm(ActionEvent event) {
 
-        ObservableList<AddToCart> itmList=FXCollections.observableArrayList();
+    ObservableList<AddToCart> itmList=FXCollections.observableArrayList();
+    public void btnAddToCartOnActionPlaceOderForm(ActionEvent event) {
 
         colOderIdPlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("oderId"));
         colCustomerNamePlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("customerName"));
@@ -140,6 +158,7 @@ public class PlaceOderFormContrlloer implements Initializable {
         colItemPlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         colQtyPlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("qty"));
         colDescriptionPlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colTotalPricePlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
 
         Integer oderId = Integer.parseInt(txtOderIdPlaceOderForm.getText());
         String customerName = txtNamePlaceOderForm.getText();
@@ -148,11 +167,49 @@ public class PlaceOderFormContrlloer implements Initializable {
         Double unitPrice = Double.parseDouble(txtPricePlaceOderForm.getText());
         Integer qty = Integer.parseInt(txtQtyPlaceOderForm.getText());
         String description = txtDescriptionPlaceOderForm1.getText();
-        Double netTotal=unitPrice*qty;
-        AddToCart addToCart = new AddToCart(oderId, customerName, itemCode, item, unitPrice, qty, description);
-        itmList.addAll(addToCart);
+        Double totalPrice = unitPrice * qty;
 
-        tblPlaceOderForm.setItems(itmList);
-        lblNetTotalPlaceOderForm.setText(netTotal.toString());
+        String stock = txtStockPlaceOderForm.getText();
+        int stockItm=Integer.parseInt(stock);
+        if(stockItm<qty){
+            new Alert(Alert.AlertType.WARNING,"Not Available").show();
+        }else{
+            AddToCart addToCart = new AddToCart(oderId, customerName, itemCode, item, unitPrice, qty, description, totalPrice);
+            itmList.addAll(addToCart);
+            tblPlaceOderForm.setItems(itmList);
+            addToCartTm();
+            updateStock();
+        }
+    }
+
+    public void get(){
+        ItemService service = ServiceFactory.getInstance().getServiceType(ServiceType.Item);
+        ObservableList<Items> allItems = service.getAllItems();
+
+        System.out.println(allItems);
+    }
+    public void updateStock(){
+
+//        Integer stock=Integer.parseInt(txtStockPlaceOderForm.getText());
+//        Integer qty=Integer.parseInt(txtQtyPlaceOderForm.getText());
+//        Integer updatedstock = stock - qty;
+//        ArrayList<Items> list=new ArrayList<>();
+//
+//        Items items=new Items();
+//
+//
+//        ItemService itemService=ServiceFactory.getInstance().getServiceType(ServiceType.Item);
+//        ObservableList<Items> allItems = itemService.getAllItems();
+//
+//        itemService.updateItem();
+    }
+
+
+    public void addToCartTm(){
+        Double netTotal = 0.0;
+        for(AddToCart addToCart: itmList){
+             netTotal += addToCart.getTotalPrice();
+            lblNetTotalPlaceOderForm.setText(Double.toString(netTotal));    
+        }
     }
 }

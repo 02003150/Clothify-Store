@@ -17,9 +17,6 @@ import java.util.List;
 
 public class EmployerDaoImpl implements EmployerDao {
 
-
-
-
     @Override
     public boolean save(EmployerEntity entity) {
         System.out.println(entity);

@@ -14,7 +14,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOderFormContrlloer">
    <top>
-      <AnchorPane prefHeight="774.0" prefWidth="921.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="780.0" prefWidth="1038.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
          <children>
             <JFXTextField fx:id="txtNamePlaceOderForm" layoutX="64.0" layoutY="169.0" prefHeight="24.0" prefWidth="326.0" promptText="   name" style="-fx-background-color: FF8080;" unFocusColor="#dfb6b6">
                <font>
@@ -41,15 +41,16 @@
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <TableView fx:id="tblPlaceOderForm" layoutX="53.0" layoutY="444.0" prefHeight="251.0" prefWidth="842.0" style="-fx-background-color: FF8080;">
+            <TableView fx:id="tblPlaceOderForm" layoutX="53.0" layoutY="447.0" prefHeight="248.0" prefWidth="859.0" style="-fx-background-color: FF8080;">
               <columns>
-                <TableColumn fx:id="colOderIdPlaceOderForm" prefWidth="88.79999542236328" text="ODER ID" />
-                <TableColumn fx:id="colItemPlaceOderForm" prefWidth="119.99996948242188" text="ITEM" />
-                  <TableColumn fx:id="colItemCodePlaceOderForm" prefWidth="91.20001220703125" text="ITEM CODE" />
-                  <TableColumn fx:id="colCustomerNamePlaceOderForm" prefWidth="164.79998779296875" text="CUSTOMER NAME" />
-                  <TableColumn fx:id="colPricePlaceOderForm" prefWidth="121.5999755859375" text="UNIT PRICE" />
-                  <TableColumn fx:id="colQtyPlaceOderForm" prefWidth="59.99993896484375" text="QTY" />
-                  <TableColumn fx:id="colDescriptionPlaceOderForm" prefWidth="202.40008544921875" text="DESCRIPTION" />
+                <TableColumn fx:id="colOderIdPlaceOderForm" prefWidth="65.60001373291016" text="ODER ID" />
+                <TableColumn fx:id="colItemPlaceOderForm" prefWidth="115.19998168945312" text="ITEM" />
+                  <TableColumn fx:id="colItemCodePlaceOderForm" prefWidth="71.99996948242188" text="ITEM CODE" />
+                  <TableColumn fx:id="colCustomerNamePlaceOderForm" prefWidth="155.20001220703125" text="CUSTOMER NAME" />
+                  <TableColumn fx:id="colPricePlaceOderForm" prefWidth="146.4000244140625" text="UNIT PRICE" />
+                  <TableColumn fx:id="colQtyPlaceOderForm" minWidth="5.60003662109375" prefWidth="59.2000732421875" text="QTY" />
+                  <TableColumn fx:id="colDescriptionPlaceOderForm" minWidth="0.0" prefWidth="129.5999755859375" text="DESCRIPTION" />
+                  <TableColumn fx:id="colTotalPricePlaceOderForm" minWidth="5.60003662109375" prefWidth="112.0" text="TOTAL PRICE" />
               </columns>
                <effect>
                   <Blend />

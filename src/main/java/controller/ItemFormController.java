@@ -28,6 +28,9 @@ public class ItemFormController implements Initializable {
 
     @FXML
     public JFXTextField txtIdtemAddItemForm;
+    public TableColumn<?, ?> colTotalPriceAddItemFormTable1;
+    public JFXTextField txtTotalPriceAddItemForm1;
+
     @FXML
     private JFXComboBox<String> cmbCatogoryAddItemForm;
 
@@ -72,6 +75,7 @@ public class ItemFormController implements Initializable {
                 Double.parseDouble(txtPriceAddItemForm.getText()),
                 cmbCatogoryAddItemForm.getValue(),
                 txtDescriptionAddItemForm.getText()
+//                Double.parseDouble(txtPriceAddItemForm*txtQtyAddItemForm)
         );
         System.out.println(items);
         if (itemService.addItem(items)){
@@ -108,6 +112,7 @@ public class ItemFormController implements Initializable {
         txtQtyAddItemForm.setText(""+items.getQty());
         txtDescriptionAddItemForm.setText(items.getDescription());
         cmbCatogoryAddItemForm.setValue(items.getCatagory());
+        txtTotalPriceAddItemForm1.setText(items.getTotalPrice().toString());
     }
     @FXML
     void btnUpdateOnActionAddItemForm(ActionEvent event) {
@@ -119,6 +124,7 @@ public class ItemFormController implements Initializable {
                 Double.parseDouble(txtPriceAddItemForm.getText()),
                 cmbCatogoryAddItemForm.getValue(),
                 txtDescriptionAddItemForm.getText()
+
         );
         itemService.updateItem(items);
         loadTable();
@@ -136,6 +142,7 @@ public class ItemFormController implements Initializable {
         colQtyAddItemFormTable.setCellValueFactory(new PropertyValueFactory<>("qty"));
         colCatagoryAddItemFormTable.setCellValueFactory(new PropertyValueFactory<>("catagory"));
         colDiscriptionAddItemFormTable.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colTotalPriceAddItemFormTable1.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
         tblAddItemFormTable.setItems(itemServices);
 
         ObservableList<String> catagoryList= FXCollections.observableArrayList();

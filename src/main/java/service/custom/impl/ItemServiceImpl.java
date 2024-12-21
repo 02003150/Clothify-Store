@@ -1,21 +1,17 @@
 package service.custom.impl;
 
-import edu.clothifyStore.util.ServiceType;
+
 import entity.ItemEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Items;
 import repository.DaoFactory;
-import repository.SuperDao;
 import repository.custom.ItemDao;
 import edu.clothifyStore.util.DaoType;
 import org.modelmapper.ModelMapper;
-import service.ServiceFactory;
-import service.SuperService;
 import service.custom.ItemService;
 
-import javax.swing.text.html.parser.Entity;
-import java.util.ArrayList;
+
 
 
 public class ItemServiceImpl implements ItemService {
@@ -34,8 +30,10 @@ public class ItemServiceImpl implements ItemService {
         ObservableList<ItemEntity> itemAll = itemDao.findAll();
         itemAll.forEach(itemEntity -> {items.add(mapper.map(itemEntity, Items.class));
         });
+
         return items;
     }
+
     @Override
     public ItemEntity updateItem(Items items) {
         System.out.println("sssssss :"+items);

@@ -17,4 +17,5 @@ public class AddToCart {
     private Double unitPrice;
     private Integer qty;
     private String description;
+    private Double totalPrice;
 }

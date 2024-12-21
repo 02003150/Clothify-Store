@@ -40,8 +40,8 @@ public class UserDaoImpl implements UserDao {
         Query<UserEntity> fromUserEntity = session.createQuery("From UserEntity", UserEntity.class);
         List<UserEntity> resultList = fromUserEntity.getResultList();
         resultList.forEach(userEntity -> {userEntities.add(userEntity);
-        session.close();
         });
+        session.close();
         return userEntities;
     }
 
