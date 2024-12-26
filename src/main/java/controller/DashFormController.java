@@ -71,5 +71,8 @@ public class DashFormController {
 
     public void btn_admin_dashform_back_on_action(ActionEvent event) {
     }
+
+    public void btnBackUserDashBoard(ActionEvent event) {
+    }
 }
 

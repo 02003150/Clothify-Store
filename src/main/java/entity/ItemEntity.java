@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
-//import org.springframework.context.annotation.Primary;
 
 @Data
 @ToString
@@ -17,7 +16,6 @@ public class ItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer itmCode;
-
     private String item;
     private Integer qty;
     private Double price;

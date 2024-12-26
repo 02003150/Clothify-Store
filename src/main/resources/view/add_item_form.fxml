@@ -16,92 +16,92 @@
    <children>
       <BorderPane layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="919.0">
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
                <children>
-                  <JFXTextField fx:id="txtQtyAddItemForm" layoutX="445.0" layoutY="264.0" prefHeight="24.0" prefWidth="326.0" promptText="   QTY" style="-fx-background-color: FF8080;">
+                  <JFXTextField fx:id="txtQtyAddItemForm" layoutX="424.0" layoutY="235.0" prefHeight="24.0" prefWidth="326.0" promptText="   QTY" style="-fx-background-color: BEBFC5;">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtPriceAddItemForm" layoutX="64.0" layoutY="264.0" prefHeight="40.0" prefWidth="358.0" promptText="   price" style="-fx-background-color: FF8080;">
+                  <JFXTextField fx:id="txtPriceAddItemForm" layoutX="43.0" layoutY="235.0" prefHeight="40.0" prefWidth="358.0" promptText="   price" style="-fx-background-color: BEBFC5;">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtItemAddItemForm" layoutX="65.0" layoutY="208.0" prefHeight="40.0" prefWidth="359.0" promptText="   item" style="-fx-background-color: FF8080;">
+                  <JFXTextField fx:id="txtItemAddItemForm" layoutX="44.0" layoutY="179.0" prefHeight="40.0" prefWidth="359.0" promptText="   item" style="-fx-background-color: BEBFC5;">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXTextField>
-                  <TableView fx:id="tblAddItemFormTable" layoutX="14.0" layoutY="439.0" prefHeight="254.0" prefWidth="894.0" style="-fx-background-color: FF8080;">
+                  <TableView fx:id="tblAddItemFormTable" layoutX="43.0" layoutY="409.0" prefHeight="254.0" prefWidth="840.0" style="-fx-background-color: #5C6672;">
                     <columns>
                         <TableColumn fx:id="colIdAddItemFormTable" prefWidth="74.39999294281006" text="ID" />
                         <TableColumn fx:id="colItemAddItemFormTable" prefWidth="169.5999755859375" text="ITEM" />
                         <TableColumn fx:id="colPriceAddItemFormTable" prefWidth="115.20001220703125" text="PRICE" />
                         <TableColumn fx:id="colQtyAddItemFormTable" minWidth="3.20001220703125" prefWidth="76.0" text="QTY" />
-                        <TableColumn fx:id="colCatagoryAddItemFormTable" prefWidth="198.4000244140625" text="CATOGORY" />
-                        <TableColumn fx:id="colDiscriptionAddItemFormTable" prefWidth="158.39990234375" text="DISCRIPTION" />
-                        <TableColumn fx:id="colTotalPriceAddItemFormTable1" prefWidth="108.800048828125" text="TOTAL PRICE" />
+                        <TableColumn fx:id="colCatagoryAddItemFormTable" prefWidth="141.5999755859375" text="CATOGORY" />
+                        <TableColumn fx:id="colDiscriptionAddItemFormTable" prefWidth="132.800048828125" text="DISCRIPTION" />
+                        <TableColumn fx:id="colTotalPriceAddItemFormTable1" prefWidth="158.39999999999998" text="TOTAL PRICE" />
                     </columns>
                      <effect>
                         <Blend />
                      </effect>
                   </TableView>
-                  <Label layoutX="255.0" layoutY="387.0" prefHeight="53.0" prefWidth="424.0" text="            ADD ITEM FORM" textFill="#8c0000">
+                  <Label layoutX="255.0" layoutY="346.0" prefHeight="53.0" prefWidth="424.0" text="            ADD ITEM FORM" textFill="#facccc">
                      <font>
-                        <Font size="28.0" />
+                        <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label layoutX="1.0" layoutY="-6.0" prefHeight="84.0" prefWidth="919.0" style="-fx-background-color: FF204E;" text="                      Clothify Store (PVT) Ltd">
+                  <Label layoutX="1.0" layoutY="-6.0" prefHeight="84.0" prefWidth="919.0" style="-fx-background-color: black;" text="                   Clothify Store (PVT) Ltd" textFill="#ffc3c3">
                      <font>
-                        <Font size="42.0" />
+                        <Font name="System Bold" size="42.0" />
                      </font>
                      <effect>
                         <Bloom threshold="1.0" />
                      </effect>
                   </Label>
-                  <JFXButton layoutX="794.0" layoutY="206.0" onAction="#btnAddOnActionAddItemForm" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: red;" text="ADD" textFill="WHITE">
+                  <JFXButton layoutX="773.0" layoutY="177.0" onAction="#btnAddOnActionAddItemForm" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: #808e9b;" text="ADD" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="796.0" layoutY="318.0" onAction="#btnDeleteOnActionAddItemForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: red;" text="DELETE" textFill="WHITE">
+                  <JFXButton layoutX="775.0" layoutY="289.0" onAction="#btnDeleteOnActionAddItemForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #808e9b;" text="DELETE" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="794.0" layoutY="262.0" onAction="#btnUpdateOnActionAddItemForm" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: red;" text="UPDATE" textFill="WHITE">
+                  <JFXButton layoutX="773.0" layoutY="233.0" onAction="#btnUpdateOnActionAddItemForm" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: #808e9b;" text="UPDATE" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="795.0" layoutY="151.0" onAction="#btnSearchOnActionAddItemForm" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: B8001F;" text="SEARCH" textFill="WHITE">
+                  <JFXButton layoutX="774.0" layoutY="122.0" onAction="#btnSearchOnActionAddItemForm" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: #808e9b;" text="SEARCH" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="746.0" layoutY="705.0" onAction="#btnReloadOnActionAddItemForm" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: red;" text="RELOAD" textFill="WHITE">
+                  <JFXButton layoutX="721.0" layoutY="686.0" onAction="#btnReloadOnActionAddItemForm" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: #808e9b;" text="RELOAD" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton layoutX="16.0" layoutY="705.0" onAction="#btnBackOnActionAddItemForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: red;" text="BACK" textFill="WHITE">
+                  <JFXButton layoutX="44.0" layoutY="686.0" onAction="#btnBackOnActionAddItemForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #808e9b;" text="BACK" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </JFXButton>
-                  <JFXTextField fx:id="txtDescriptionAddItemForm" layoutX="64.0" layoutY="320.0" prefHeight="40.0" prefWidth="357.0" promptText="description" style="-fx-background-color: FF8080;" unFocusColor="#947171">
+                  <JFXTextField fx:id="txtDescriptionAddItemForm" layoutX="43.0" layoutY="291.0" prefHeight="40.0" prefWidth="357.0" promptText="description" style="-fx-background-color: BEBFC5;" unFocusColor="#947171">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXComboBox fx:id="cmbCatogoryAddItemForm" layoutX="444.0" layoutY="208.0" prefHeight="38.0" prefWidth="328.0" promptText="Catogory" style="-fx-background-color: FF8080;" />
-                  <JFXTextField fx:id="txtIdtemAddItemForm" layoutX="652.0" layoutY="153.0" prefHeight="40.0" prefWidth="120.0" promptText=" search Id" style="-fx-background-color: F95454;" text=" id">
+                  <JFXComboBox fx:id="cmbCatogoryAddItemForm" layoutX="423.0" layoutY="179.0" prefHeight="38.0" prefWidth="328.0" promptText="Catogory" style="-fx-background-color: BEBFC5;" />
+                  <JFXTextField fx:id="txtIdtemAddItemForm" layoutX="631.0" layoutY="124.0" prefHeight="40.0" prefWidth="120.0" promptText=" search Id" style="-fx-background-color: BEBFC5;" text=" id">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtTotalPriceAddItemForm1" layoutX="444.0" layoutY="320.0" prefHeight="40.0" prefWidth="328.0" promptText="   total price" style="-fx-background-color: FF8080;">
+                  <JFXTextField fx:id="txtTotalPriceAddItemForm1" layoutX="423.0" layoutY="291.0" prefHeight="40.0" prefWidth="328.0" promptText="   total price" style="-fx-background-color: BEBFC5;">
                      <font>
                         <Font size="18.0" />
                      </font>

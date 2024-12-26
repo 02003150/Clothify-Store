@@ -17,13 +17,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lombok.RequiredArgsConstructor;
 import model.AddToCart;
 import model.Items;
+import model.OderDetails;
 import repository.DaoFactory;
 import repository.SuperDao;
 import service.ServiceFactory;
 import service.SuperService;
 import service.custom.ItemService;
+import service.custom.OderDetailsService;
+
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -42,6 +46,7 @@ public class PlaceOderFormContrlloer implements Initializable {
     public JFXTextField txtTotalPricePlaceOderForm;
     public TableColumn colTotalPricePlaceOderForm1;
     public TableColumn<?, ?>  colTotalPricePlaceOderForm;
+    public TableColumn<?, ?> colDatePlaceOderForm;
     @FXML
     private TableColumn<?, ?> colCustomerNamePlaceOderForm;
     @FXML
@@ -101,7 +106,8 @@ public class PlaceOderFormContrlloer implements Initializable {
     }
     @FXML
     void btnPlaceOderOnActionPlaceOderForm(ActionEvent event) {
-
+        addOderDetails();
+        updateStock();
     }
     @FXML
     void btnSearchOnActionPlaceOderForm(ActionEvent event) {
@@ -159,6 +165,7 @@ public class PlaceOderFormContrlloer implements Initializable {
         colQtyPlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("qty"));
         colDescriptionPlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("description"));
         colTotalPricePlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("totalPrice"));
+        colDatePlaceOderForm.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         Integer oderId = Integer.parseInt(txtOderIdPlaceOderForm.getText());
         String customerName = txtNamePlaceOderForm.getText();
@@ -168,42 +175,37 @@ public class PlaceOderFormContrlloer implements Initializable {
         Integer qty = Integer.parseInt(txtQtyPlaceOderForm.getText());
         String description = txtDescriptionPlaceOderForm1.getText();
         Double totalPrice = unitPrice * qty;
+        LocalDate date=LocalDate.parse(lblDatePlaceOderForm.getText());
 
         String stock = txtStockPlaceOderForm.getText();
         int stockItm=Integer.parseInt(stock);
         if(stockItm<qty){
             new Alert(Alert.AlertType.WARNING,"Not Available").show();
         }else{
-            AddToCart addToCart = new AddToCart(oderId, customerName, itemCode, item, unitPrice, qty, description, totalPrice);
+            AddToCart addToCart = new AddToCart(oderId, customerName, itemCode, item, unitPrice, qty, description, totalPrice,date);
             itmList.addAll(addToCart);
             tblPlaceOderForm.setItems(itmList);
             addToCartTm();
-            updateStock();
+
         }
     }
 
-    public void get(){
-        ItemService service = ServiceFactory.getInstance().getServiceType(ServiceType.Item);
-        ObservableList<Items> allItems = service.getAllItems();
+    public void addOderDetails(){
+        OderDetails oderDetails=new OderDetails(Integer.parseInt(txtOderIdPlaceOderForm.getText()),Double.parseDouble(lblNetTotalPlaceOderForm.getText()),LocalDate.parse(lblDatePlaceOderForm.getText()));
+        OderDetailsService service = ServiceFactory.getInstance().getServiceType(ServiceType.OderDetails);
+        boolean b=service.addOderDetails(oderDetails);
 
-        System.out.println(allItems);
     }
     public void updateStock(){
-
-//        Integer stock=Integer.parseInt(txtStockPlaceOderForm.getText());
-//        Integer qty=Integer.parseInt(txtQtyPlaceOderForm.getText());
-//        Integer updatedstock = stock - qty;
-//        ArrayList<Items> list=new ArrayList<>();
-//
-//        Items items=new Items();
-//
-//
-//        ItemService itemService=ServiceFactory.getInstance().getServiceType(ServiceType.Item);
-//        ObservableList<Items> allItems = itemService.getAllItems();
-//
-//        itemService.updateItem();
+        Integer id=cmdItemCode.getValue();
+        ItemService service = ServiceFactory.getInstance().getServiceType(ServiceType.Item);
+        Items items = service.searchItem(id);
+        Integer stock=Integer.parseInt(txtStockPlaceOderForm.getText());
+        Integer qty=Integer.parseInt(txtQtyPlaceOderForm.getText());
+        Integer updatedstock = stock - qty;
+        Items items1=new Items(items.getItmCode(),items.getItem(),updatedstock,items.getPrice(),items.getCatagory(),items.getDescription(),items.getTotalPrice());
+        service.updateItem(items1);
     }
-
 
     public void addToCartTm(){
         Double netTotal = 0.0;

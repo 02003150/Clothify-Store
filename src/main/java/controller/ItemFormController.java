@@ -126,6 +126,18 @@ public class ItemFormController implements Initializable {
                 txtDescriptionAddItemForm.getText()
 
         );
+//        PlaceOderFormContrlloer placeOderFormContrlloer=new PlaceOderFormContrlloer();
+//        int updatedStock = placeOderFormContrlloer.updateStock();
+
+//        Items item=new Items(
+//                Integer.parseInt(txtIdtemAddItemForm.getText()),
+//                txtItemAddItemForm.getText(),
+//                updatedStock,
+//                Double.parseDouble(txtPriceAddItemForm.getText()),
+//                cmbCatogoryAddItemForm.getValue(),
+//                txtDescriptionAddItemForm.getText()
+//
+//        );
         itemService.updateItem(items);
         loadTable();
     }

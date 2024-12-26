@@ -2,10 +2,7 @@ package service;
 
 
 import edu.clothifyStore.util.ServiceType;
-import service.custom.impl.EmployerServiceImpl;
-import service.custom.impl.ItemServiceImpl;
-import service.custom.impl.SupplierServiceImpl;
-import service.custom.impl.UserRegisterFormServiceImpl;
+import service.custom.impl.*;
 
 public class ServiceFactory {
     private static ServiceFactory instance;
@@ -24,6 +21,7 @@ public class ServiceFactory {
             case Supplier:return (T)new SupplierServiceImpl();
             case Employer:return (T)new EmployerServiceImpl();
             case User:return (T)new UserRegisterFormServiceImpl();
+            case OderDetails:return (T)new OderDetailsServiceImpl();
         }
         return null;
     }

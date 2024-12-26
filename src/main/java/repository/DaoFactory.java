@@ -1,9 +1,6 @@
 package repository;
 
-import repository.custom.impl.EmployerDaoImpl;
-import repository.custom.impl.ItemDaoImpl;
-import repository.custom.impl.SupplierDaoImpl;
-import repository.custom.impl.UserDaoImpl;
+import repository.custom.impl.*;
 import edu.clothifyStore.util.DaoType;
 
 public class DaoFactory {
@@ -22,6 +19,7 @@ public class DaoFactory {
         case Supplier:return (T) new SupplierDaoImpl();
         case Employer:return (T) new EmployerDaoImpl();
         case User:return (T) new UserDaoImpl();
+        case OderDetails:return (T) new OderDetailsDaoImpl();
     }
         return null;
     }

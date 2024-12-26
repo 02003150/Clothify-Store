@@ -14,113 +14,114 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOderFormContrlloer">
    <top>
-      <AnchorPane prefHeight="780.0" prefWidth="1038.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="780.0" prefWidth="1038.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
          <children>
-            <JFXTextField fx:id="txtNamePlaceOderForm" layoutX="64.0" layoutY="169.0" prefHeight="24.0" prefWidth="326.0" promptText="   name" style="-fx-background-color: FF8080;" unFocusColor="#dfb6b6">
+            <JFXTextField fx:id="txtNamePlaceOderForm" layoutX="66.0" layoutY="160.0" prefHeight="24.0" prefWidth="326.0" promptText="   name" style="-fx-background-color: BEBFC5;" unFocusColor="#dfb6b6">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtQtyPlaceOderForm" layoutX="446.0" layoutY="279.0" prefHeight="24.0" prefWidth="326.0" promptText="   QTY" style="-fx-background-color: FF8080;">
+            <JFXTextField fx:id="txtQtyPlaceOderForm" layoutX="446.0" layoutY="275.0" prefHeight="24.0" prefWidth="326.0" promptText="   QTY" style="-fx-background-color: BEBFC5;">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtPricePlaceOderForm" layoutX="64.0" layoutY="279.0" prefHeight="24.0" prefWidth="326.0" promptText="   unit price" style="-fx-background-color: FF8080;">
+            <JFXTextField fx:id="txtPricePlaceOderForm" layoutX="66.0" layoutY="275.0" prefHeight="24.0" prefWidth="326.0" promptText="   unit price" style="-fx-background-color: BEBFC5;">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtStockPlaceOderForm" layoutX="64.0" layoutY="222.0" prefHeight="24.0" prefWidth="326.0" promptText="  stock" style="-fx-background-color: FF8080;" unFocusColor="#947777">
+            <JFXTextField fx:id="txtStockPlaceOderForm" layoutX="66.0" layoutY="217.0" prefHeight="24.0" prefWidth="326.0" promptText="  stock" style="-fx-background-color: BEBFC5;" unFocusColor="#947777">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtItemPlaceOderForm" layoutX="446.0" layoutY="222.0" prefHeight="24.0" prefWidth="326.0" promptText="   item" style="-fx-background-color: FF8080;">
+            <JFXTextField fx:id="txtItemPlaceOderForm" layoutX="446.0" layoutY="217.0" prefHeight="24.0" prefWidth="326.0" promptText="   item" style="-fx-background-color: BEBFC5;">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <TableView fx:id="tblPlaceOderForm" layoutX="53.0" layoutY="447.0" prefHeight="248.0" prefWidth="859.0" style="-fx-background-color: FF8080;">
+            <TableView fx:id="tblPlaceOderForm" layoutX="35.0" layoutY="454.0" prefHeight="248.0" prefWidth="859.0" style="-fx-background-color: #5C6672;">
               <columns>
                 <TableColumn fx:id="colOderIdPlaceOderForm" prefWidth="65.60001373291016" text="ODER ID" />
-                <TableColumn fx:id="colItemPlaceOderForm" prefWidth="115.19998168945312" text="ITEM" />
-                  <TableColumn fx:id="colItemCodePlaceOderForm" prefWidth="71.99996948242188" text="ITEM CODE" />
-                  <TableColumn fx:id="colCustomerNamePlaceOderForm" prefWidth="155.20001220703125" text="CUSTOMER NAME" />
-                  <TableColumn fx:id="colPricePlaceOderForm" prefWidth="146.4000244140625" text="UNIT PRICE" />
-                  <TableColumn fx:id="colQtyPlaceOderForm" minWidth="5.60003662109375" prefWidth="59.2000732421875" text="QTY" />
-                  <TableColumn fx:id="colDescriptionPlaceOderForm" minWidth="0.0" prefWidth="129.5999755859375" text="DESCRIPTION" />
-                  <TableColumn fx:id="colTotalPricePlaceOderForm" minWidth="5.60003662109375" prefWidth="112.0" text="TOTAL PRICE" />
+                <TableColumn fx:id="colItemPlaceOderForm" prefWidth="75.199951171875" text="ITEM" />
+                  <TableColumn fx:id="colItemCodePlaceOderForm" prefWidth="78.4000244140625" text="ITEM CODE" />
+                  <TableColumn fx:id="colCustomerNamePlaceOderForm" prefWidth="141.59994506835938" text="CUSTOMER NAME" />
+                  <TableColumn fx:id="colPricePlaceOderForm" prefWidth="89.5999755859375" text="UNIT PRICE" />
+                  <TableColumn fx:id="colQtyPlaceOderForm" minWidth="5.60003662109375" prefWidth="63.20001220703125" text="QTY" />
+                  <TableColumn fx:id="colDescriptionPlaceOderForm" minWidth="0.0" prefWidth="99.20001220703125" text="DESCRIPTION" />
+                  <TableColumn fx:id="colTotalPricePlaceOderForm" minWidth="5.60003662109375" prefWidth="138.39996337890625" text="TOTAL PRICE" />
+                  <TableColumn fx:id="colDatePlaceOderForm" minWidth="5.60003662109375" prefWidth="104.00004882812505" text="DATE" />
               </columns>
                <effect>
                   <Blend />
                </effect>
             </TableView>
-            <Label layoutX="255.0" layoutY="390.0" prefHeight="53.0" prefWidth="424.0" text="           PLACE ODER FORM">
+            <Label layoutX="230.0" layoutY="400.0" prefHeight="53.0" prefWidth="424.0" text="           PLACE ODER FORM" textFill="#ffc3c3">
                <font>
-                  <Font size="28.0" />
+                  <Font name="System Bold" size="31.0" />
                </font>
             </Label>
-            <Label layoutX="1.0" layoutY="-1.0" prefHeight="84.0" prefWidth="919.0" style="-fx-background-color: FF204E;" text="                      Clothify Store (PVT) Ltd">
+            <Label layoutX="1.0" layoutY="-1.0" prefHeight="84.0" prefWidth="919.0" style="-fx-background-color: black;" text="                Clothify Store (PVT) Ltd" textFill="#e4a1a1">
                <font>
-                  <Font size="42.0" />
+                  <Font name="System Bold" size="42.0" />
                </font>
                <effect>
                   <Bloom threshold="1.0" />
                </effect>
             </Label>
-            <JFXButton layoutX="789.0" layoutY="171.0" onAction="#btnAddOnActionPlaceOderForm" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: red;" text="ADD" textFill="WHITE">
+            <JFXButton layoutX="788.0" layoutY="158.0" onAction="#btnAddOnActionPlaceOderForm" prefHeight="29.0" prefWidth="103.0" style="-fx-background-color: #808e9b;" text="ADD" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="790.0" layoutY="333.0" onAction="#btnDeleteOnActionPlaceOderForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: red;" text="DELETE" textFill="WHITE">
+            <JFXButton layoutX="789.0" layoutY="329.0" onAction="#btnDeleteOnActionPlaceOderForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #808e9b;" text="DELETE" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="788.0" layoutY="279.0" onAction="#btnUpdateOnActionPlaceOderForm" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: red;" text="UPDATE" textFill="WHITE">
+            <JFXButton layoutX="788.0" layoutY="273.0" onAction="#btnUpdateOnActionPlaceOderForm" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: #808e9b;" text="UPDATE" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="789.0" layoutY="225.0" onAction="#btnSearchOnActionPlaceOderForm" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: red;" text="SEARCH" textFill="WHITE">
+            <JFXButton layoutX="789.0" layoutY="215.0" onAction="#btnSearchOnActionPlaceOderForm" prefHeight="43.0" prefWidth="103.0" style="-fx-background-color: #808e9b;" text="SEARCH" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <Label alignment="CENTER" layoutX="149.0" layoutY="706.0" prefHeight="36.0" prefWidth="135.0" text="NET TOTAL">
+            <Label alignment="CENTER" layoutX="149.0" layoutY="716.0" prefHeight="36.0" prefWidth="135.0" text="NET TOTAL" textFill="#eaec4b">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label fx:id="lblNetTotalPlaceOderForm" layoutX="292.0" layoutY="705.0" prefHeight="38.0" prefWidth="104.0" text="0000.0">
+            <Label fx:id="lblNetTotalPlaceOderForm" layoutX="292.0" layoutY="716.0" prefHeight="38.0" prefWidth="104.0" text="0000.0" textFill="#d8e74e">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <JFXButton layoutX="734.0" layoutY="705.0" onAction="#btnPlaceOderOnActionPlaceOderForm" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: red;" text="PLACE ODER" textFill="WHITE">
+            <JFXButton layoutX="732.0" layoutY="712.0" onAction="#btnPlaceOderOnActionPlaceOderForm" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: #808e9b;" text="PLACE ODER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="54.0" layoutY="705.0" onAction="#btnBackPlaceOderForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: red;" text="BACK" textFill="WHITE">
+            <JFXButton layoutX="35.0" layoutY="713.0" onAction="#btnBackPlaceOderForm" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #808e9b;" text="BACK" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <JFXTextField fx:id="txtDescriptionPlaceOderForm1" layoutX="65.0" layoutY="335.0" prefHeight="40.0" prefWidth="708.0" promptText="  description" style="-fx-background-color: FF8080;" unFocusColor="#dfb6b6">
+            <JFXTextField fx:id="txtDescriptionPlaceOderForm1" layoutX="65.0" layoutY="331.0" prefHeight="40.0" prefWidth="708.0" promptText="  description" style="-fx-background-color: BEBFC5;" unFocusColor="#dfb6b6">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXComboBox fx:id="cmdItemCode" layoutX="446.0" layoutY="170.0" prefHeight="38.0" prefWidth="326.0" promptText="  item Code" style="-fx-background-color: FF8080;" />
-            <Label layoutX="65.0" layoutY="115.0" prefHeight="36.0" prefWidth="87.0" text="Date ">
+            <JFXComboBox fx:id="cmdItemCode" layoutX="446.0" layoutY="161.0" prefHeight="38.0" prefWidth="326.0" promptText="  item Code" style="-fx-background-color: BEBFC5;" />
+            <Label layoutX="65.0" layoutY="115.0" prefHeight="36.0" prefWidth="87.0" text="Date " textFill="#d7cb92">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label fx:id="lblDatePlaceOderForm" layoutX="142.0" layoutY="117.0" text="2024-10-25">
+            <Label fx:id="lblDatePlaceOderForm" layoutX="137.0" layoutY="120.0" text="2024-10-25" textFill="#fbff8f">
                <font>
                   <Font size="22.0" />
                </font>
@@ -130,12 +131,12 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtOderIdPlaceOderForm" layoutX="271.0" layoutY="113.0" prefHeight="40.0" prefWidth="120.0" promptText="  oder id" style="-fx-background-color: FF8080;" unFocusColor="#dfb6b6">
+            <JFXTextField fx:id="txtOderIdPlaceOderForm" layoutX="652.0" layoutY="104.0" prefHeight="40.0" prefWidth="120.0" promptText="  oder id" style="-fx-background-color: BEBFC5;" unFocusColor="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXTextField>
-            <JFXButton layoutX="734.0" layoutY="390.0" onAction="#btnAddToCartOnActionPlaceOderForm" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: red;" text="ADD TO CART" textFill="WHITE">
+            <JFXButton layoutX="734.0" layoutY="390.0" onAction="#btnAddToCartOnActionPlaceOderForm" prefHeight="40.0" prefWidth="161.0" style="-fx-background-color: #808e9b;" text="ADD TO CART" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

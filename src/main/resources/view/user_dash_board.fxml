@@ -10,37 +10,37 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashFormController">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #353b48;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="90.0" prefWidth="650.0" style="-fx-background-color: FF204E;" text="         Clothify Store (PVT) Ltd">
+            <Label prefHeight="90.0" prefWidth="650.0" style="-fx-background-color: black;" text="         Clothify Store (PVT) Ltd" textFill="#b77070">
                <font>
-                  <Font size="42.0" />
+                  <Font name="System Bold" size="42.0" />
                </font>
             </Label>
-            <JFXButton layoutX="312.0" layoutY="155.0" onAction="#btn_dashform_place_oder_form_on_action" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: RED;" text="PLACE ODER FORM" textFill="WHITE">
+            <JFXButton layoutX="356.0" layoutY="136.0" onAction="#btn_dashform_place_oder_form_on_action" prefHeight="66.0" prefWidth="280.0" style="-fx-background-color: #808e9b;" text="PLACE ODER FORM" textFill="WHITE">
                <font>
                   <Font size="28.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="312.0" layoutY="356.0" onAction="#btn_dashform_add_suppier_form_on_action" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: RED;" text="ADD SUPPLIER" textFill="WHITE">
+            <JFXButton layoutX="356.0" layoutY="360.0" onAction="#btn_dashform_add_suppier_form_on_action" prefHeight="63.0" prefWidth="278.0" style="-fx-background-color: #808e9b;" text="ADD SUPPLIER" textFill="WHITE">
                <font>
                   <Font size="28.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="312.0" layoutY="255.0" onAction="#btn_dashform_add_item_on_action" prefHeight="70.0" prefWidth="289.0" style="-fx-background-color: RED;" text="ADD ITEM" textFill="WHITE">
+            <JFXButton layoutX="355.0" layoutY="248.0" onAction="#btn_dashform_add_item_on_action" prefHeight="62.0" prefWidth="279.0" style="-fx-background-color: #808e9b;" text="ADD ITEM" textFill="WHITE">
                <font>
                   <Font size="28.0" />
                </font>
             </JFXButton>
-            <ImageView fitHeight="266.0" fitWidth="258.0" layoutX="29.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="261.0" fitWidth="263.0" layoutX="27.0" layoutY="149.0">
+            <ImageView fitHeight="266.0" fitWidth="258.0" layoutX="30.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="376.0" fitWidth="346.0" layoutX="1.0" layoutY="90.0">
                <image>
-                  <Image url="@../image/homePageimage.jpg" />
+                  <Image url="@../image/userDashBoard.jpg" />
                </image>
             </ImageView>
-            <JFXButton layoutX="29.0" layoutY="406.0" onAction="#btn_user_dashboard_back_on_action" prefHeight="22.0" prefWidth="92.0" style="-fx-background-color: RED;" text="BACK" textFill="WHITE">
+            <JFXButton layoutX="21.0" layoutY="399.0" onAction="#btnBackUserDashBoard" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #84817a;" text="BACK" textFill="#ffeded">
                <font>
-                  <Font size="19.0" />
+                  <Font size="20.0" />
                </font>
             </JFXButton>
          </children>
